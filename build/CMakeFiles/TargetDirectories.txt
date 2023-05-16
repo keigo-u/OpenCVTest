@@ -1,0 +1,4 @@
+/Users/k.u/Documents/programming-ryukyu/opencv_sample/build/CMakeFiles/rebuild_cache.dir
+/Users/k.u/Documents/programming-ryukyu/opencv_sample/build/CMakeFiles/edit_cache.dir
+/Users/k.u/Documents/programming-ryukyu/opencv_sample/build/CMakeFiles/match.dir
+/Users/k.u/Documents/programming-ryukyu/opencv_sample/build/CMakeFiles/main.dir
