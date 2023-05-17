@@ -63,8 +63,9 @@ CMAKE_BINARY_DIR = /Users/k.u/Documents/programming-ryukyu/opencv_sample/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/pose_estimation.dir/all
+all: CMakeFiles/test.dir/all
 all: CMakeFiles/match.dir/all
-all: CMakeFiles/main.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -72,9 +73,62 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/pose_estimation.dir/clean
+clean: CMakeFiles/test.dir/clean
 clean: CMakeFiles/match.dir/clean
-clean: CMakeFiles/main.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/pose_estimation.dir
+
+# All Build rule for target.
+CMakeFiles/pose_estimation.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pose_estimation.dir/build.make CMakeFiles/pose_estimation.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pose_estimation.dir/build.make CMakeFiles/pose_estimation.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/k.u/Documents/programming-ryukyu/opencv_sample/build/CMakeFiles --progress-num=3,4 "Built target pose_estimation"
+.PHONY : CMakeFiles/pose_estimation.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/pose_estimation.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/k.u/Documents/programming-ryukyu/opencv_sample/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pose_estimation.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/k.u/Documents/programming-ryukyu/opencv_sample/build/CMakeFiles 0
+.PHONY : CMakeFiles/pose_estimation.dir/rule
+
+# Convenience name for target.
+pose_estimation: CMakeFiles/pose_estimation.dir/rule
+.PHONY : pose_estimation
+
+# clean rule for target.
+CMakeFiles/pose_estimation.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pose_estimation.dir/build.make CMakeFiles/pose_estimation.dir/clean
+.PHONY : CMakeFiles/pose_estimation.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test.dir
+
+# All Build rule for target.
+CMakeFiles/test.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/k.u/Documents/programming-ryukyu/opencv_sample/build/CMakeFiles --progress-num=5,6 "Built target test"
+.PHONY : CMakeFiles/test.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/k.u/Documents/programming-ryukyu/opencv_sample/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/k.u/Documents/programming-ryukyu/opencv_sample/build/CMakeFiles 0
+.PHONY : CMakeFiles/test.dir/rule
+
+# Convenience name for target.
+test: CMakeFiles/test.dir/rule
+.PHONY : test
+
+# clean rule for target.
+CMakeFiles/test.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/clean
+.PHONY : CMakeFiles/test.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/match.dir
@@ -83,7 +137,7 @@ clean: CMakeFiles/main.dir/clean
 CMakeFiles/match.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/match.dir/build.make CMakeFiles/match.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/match.dir/build.make CMakeFiles/match.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/k.u/Documents/programming-ryukyu/opencv_sample/build/CMakeFiles --progress-num=3,4 "Built target match"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/k.u/Documents/programming-ryukyu/opencv_sample/build/CMakeFiles --progress-num=1,2 "Built target match"
 .PHONY : CMakeFiles/match.dir/all
 
 # Build rule for subdir invocation for target.
@@ -101,32 +155,6 @@ match: CMakeFiles/match.dir/rule
 CMakeFiles/match.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/match.dir/build.make CMakeFiles/match.dir/clean
 .PHONY : CMakeFiles/match.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/main.dir
-
-# All Build rule for target.
-CMakeFiles/main.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/k.u/Documents/programming-ryukyu/opencv_sample/build/CMakeFiles --progress-num=1,2 "Built target main"
-.PHONY : CMakeFiles/main.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/k.u/Documents/programming-ryukyu/opencv_sample/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/k.u/Documents/programming-ryukyu/opencv_sample/build/CMakeFiles 0
-.PHONY : CMakeFiles/main.dir/rule
-
-# Convenience name for target.
-main: CMakeFiles/main.dir/rule
-.PHONY : main
-
-# clean rule for target.
-CMakeFiles/main.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/clean
-.PHONY : CMakeFiles/main.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -117,6 +117,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named pose_estimation
+
+# Build rule for target.
+pose_estimation: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pose_estimation
+.PHONY : pose_estimation
+
+# fast build rule for target.
+pose_estimation/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pose_estimation.dir/build.make CMakeFiles/pose_estimation.dir/build
+.PHONY : pose_estimation/fast
+
+#=============================================================================
+# Target rules for targets named test
+
+# Build rule for target.
+test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test
+.PHONY : test
+
+# fast build rule for target.
+test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
+.PHONY : test/fast
+
+#=============================================================================
 # Target rules for targets named match
 
 # Build rule for target.
@@ -129,26 +155,12 @@ match/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/match.dir/build.make CMakeFiles/match.dir/build
 .PHONY : match/fast
 
-#=============================================================================
-# Target rules for targets named main
-
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
-
-# fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
-
 src/matching.o: src/matching.cpp.o
 .PHONY : src/matching.o
 
 # target to build an object file
 src/matching.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/match.dir/build.make CMakeFiles/match.dir/src/matching.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/matching.cpp.o
 .PHONY : src/matching.cpp.o
 
 src/matching.i: src/matching.cpp.i
@@ -157,7 +169,6 @@ src/matching.i: src/matching.cpp.i
 # target to preprocess a source file
 src/matching.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/match.dir/build.make CMakeFiles/match.dir/src/matching.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/matching.cpp.i
 .PHONY : src/matching.cpp.i
 
 src/matching.s: src/matching.cpp.s
@@ -166,8 +177,55 @@ src/matching.s: src/matching.cpp.s
 # target to generate assembly for a file
 src/matching.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/match.dir/build.make CMakeFiles/match.dir/src/matching.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/matching.cpp.s
 .PHONY : src/matching.cpp.s
+
+src/pose_estimation.o: src/pose_estimation.cpp.o
+.PHONY : src/pose_estimation.o
+
+# target to build an object file
+src/pose_estimation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pose_estimation.dir/build.make CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o
+.PHONY : src/pose_estimation.cpp.o
+
+src/pose_estimation.i: src/pose_estimation.cpp.i
+.PHONY : src/pose_estimation.i
+
+# target to preprocess a source file
+src/pose_estimation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pose_estimation.dir/build.make CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.i
+.PHONY : src/pose_estimation.cpp.i
+
+src/pose_estimation.s: src/pose_estimation.cpp.s
+.PHONY : src/pose_estimation.s
+
+# target to generate assembly for a file
+src/pose_estimation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pose_estimation.dir/build.make CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.s
+.PHONY : src/pose_estimation.cpp.s
+
+src/test.o: src/test.cpp.o
+.PHONY : src/test.o
+
+# target to build an object file
+src/test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/test.cpp.o
+.PHONY : src/test.cpp.o
+
+src/test.i: src/test.cpp.i
+.PHONY : src/test.i
+
+# target to preprocess a source file
+src/test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/test.cpp.i
+.PHONY : src/test.cpp.i
+
+src/test.s: src/test.cpp.s
+.PHONY : src/test.s
+
+# target to generate assembly for a file
+src/test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/test.cpp.s
+.PHONY : src/test.cpp.s
 
 # Help Target
 help:
@@ -177,11 +235,18 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... main"
 	@echo "... match"
+	@echo "... pose_estimation"
+	@echo "... test"
 	@echo "... src/matching.o"
 	@echo "... src/matching.i"
 	@echo "... src/matching.s"
+	@echo "... src/pose_estimation.o"
+	@echo "... src/pose_estimation.i"
+	@echo "... src/pose_estimation.s"
+	@echo "... src/test.o"
+	@echo "... src/test.i"
+	@echo "... src/test.s"
 .PHONY : help
 
 
