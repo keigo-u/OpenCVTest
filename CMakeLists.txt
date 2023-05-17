@@ -27,3 +27,11 @@ include_directories(
 # matching
 add_executable(match ./src/matching.cpp)
 target_link_libraries(match ${OpenCV_LIBRARIES})
+
+# test
+add_executable(test ./src/test.cpp)
+target_link_libraries(test ${OpenCV_LIBRARIES})
+
+# pose_estimation
+add_executable(pose_estimation ./src/pose_estimation.cpp)
+target_link_libraries(pose_estimation ${OpenCV_LIBRARIES})
